@@ -1,12 +1,3 @@
-/* BRANDON ELDER - applicant */
-
-/* This was fun! I don't have much experience doing PSD to HTML conversions
-but I did the best that I could. I used Flexbox for most of the layout.
-I used vw units for most of the font-sizes. It's something I've never considered but
-thought it was worth trying....Very interested in learning more about fluid typography...
-couldn't really pull if off here though. Also, I took some liberties with the 
-mobile/tablet views. */
-
 /* FONTS */
 
 @font-face {
@@ -59,7 +50,6 @@ nav {
 }
 
 .nav-phone {
-  /* Couldn't find a free Bernina Font - Thought this was close */
   font-family: 'Open Sans', sans-serif;
   font-size: 19px;
 }
@@ -291,15 +281,6 @@ footer {
 
 /******  MEDIA QUERIES ******/
 
-/* I admittedly struggle with media queries...
-best practices?...better alternatives?...universal breakpoints?
-Generally, I just look for places where the design breaks, and use those for my breakpoints. 
-Sometimes I just use Bootstrap or Foundation breakpoints, but always end up going outside of 
-those boundaries and set more custom ones as needed. I try to find a few common breakoints 
-that will work for multiple elements, but still usually end up feeling like I could be doing 
-things in a better or smarter way. I'm very interested in conquering responsive design, 
-and enjoy trying new approches. */
-
 @media (min-width: 1260px) {
   #hero-section {
     height: 70vh;
@@ -410,7 +391,7 @@ and enjoy trying new approches. */
     height: 40vh;
   }
   #sam-features-lists {
-    font-size: 2.2vw;
+    font-size: 2.1vw;
   }
 }
 
