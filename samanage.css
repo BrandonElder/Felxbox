@@ -1,0 +1,517 @@
+/* BRANDON ELDER - applicant */
+
+/* This was fun! I don't have much experience doing PSD to HTML conversions
+but I did the best that I could. I used Flexbox for most of the layout.
+I used vw units for most of the font-sizes. It's something I've never considered but
+thought it was worth trying....Very interested in learning more about fluid typography...
+couldn't really pull if off here though. Also, I took some liberties with the 
+mobile/tablet views. */
+
+/* FONTS */
+
+@font-face {
+  font-family: 'Helvetica-Light';
+  src: url('assets/Helvetica-Light.woff') format('woff'),
+       url('assets/Helvetica-Light.ttf') format('truetype'),
+       url('assets/Helvetica-Light.svg#Helvetica-Light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* GLOBAL STYLES */
+
+*, *:before, *:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0px;
+  font-family: 'Helvetica-Light', Arial, Helvetica, sans-serif;
+}
+
+button {
+  border: none;
+  background: none;
+  outline: none;
+}
+
+/* NAVIGATION BAR */
+
+nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+  background-color: #0067b3;
+  color: rgb(255,255,255);
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.nav-logo {
+  display: flex;
+  padding-top: 8px;
+}
+
+.nav-phone {
+  /* Couldn't find a free Bernina Font - Thought this was close */
+  font-family: 'Open Sans', sans-serif;
+  font-size: 19px;
+}
+
+/*  HERO SECTION */
+
+#hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  background-image: url(assets/samanage-header-background.jpg);
+  background-size: cover;
+}
+
+#hero-caption {
+  width: 100%;
+  background: rgba(0,0,0,0.35);
+  color: rgb(255,255,255);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.hero-caption-text {
+  font-size: 3.6vw;
+}
+
+.hero-caption-text span {
+  font-size: 7.2vw;
+  line-height: 1.5;
+}
+
+#hero-btns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero-btn {
+  width: 200px;
+  margin: 50px 10px 0;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  color: rgb(255,255,255);
+  text-transform: uppercase;
+}
+
+#demo-btn {
+  background-color: #009535;
+}
+
+#trial-btn {
+  background-color: #fbcd1b;
+  color: blue;  
+}
+
+/* CUSTOMER LOGOS SECTION */
+
+#customer-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ebeef2;
+}
+
+#customer-logos img {
+  width: 60%;
+  padding: 20px 0;
+}
+
+/* SAMANAGE FEATURES SECTION */
+
+#sam-features-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+#sam-ipad-img {
+  display: none;
+}
+
+#sam-features {
+  display: flex;
+  flex-wrap: wrap;
+  width: 45%;
+  padding-left: 40px;
+  font-size: 1.2vw;
+  text-align: center;
+}
+
+.features-header {
+  margin: 0;
+  font-size: 4vw;
+}
+
+.features-header span {
+  font-size: 6vw;
+  line-height: 1.6;
+}
+
+#sam-features-lists {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 100%;
+  font-size: 1.0vw;
+}
+
+.features-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 0;
+  font-weight: bold;
+  list-style: none;
+  line-height: 2.8;
+}
+
+.features-text {
+  padding: 0px 40px 0px;
+}
+
+/******************** FEATURES ICONS ****************************/
+li#icon-tm {
+  background: url('assets/squareicon1.png') no-repeat left center;
+}li#icon-im {
+  background: url('assets/squareicon2.png') no-repeat left center;  
+}li#icon-pc {
+  background: url('assets/squareicon3.png') no-repeat left center;  
+}li#icon-sc {
+  background: url('assets/squareicon4.png') no-repeat left center;  
+}li#icon-ssp {
+  background: url('assets/squareicon5.png') no-repeat left center;  
+}li#icon-kb {
+  background: url('assets/squareicon6.png') no-repeat left center;  
+}li#icon-ei {
+  background: url('assets/squareicon7.png') no-repeat left center;  
+}li#icon-aa {
+  background: url('assets/squareicon8.png') no-repeat left center;  
+}li#icon-sla {
+  background: url('assets/squareicon9.png') no-repeat left center;  
+}li#icon-ma {
+  background: url('assets/squareicon10.png') no-repeat left center;  
+}li#icon-gai {
+  background: url('assets/squareicon11.png') no-repeat left center;  
+}li#icon-dr {
+  background: url('assets/squareicon12.png') no-repeat left center;  
+}
+
+/* REQUEST QUOTE SECTION */
+
+#request-quote-section {
+  max-height: 350px;
+  padding: 10px 0;
+  background-image: url('assets/samanage-accordian-form-bg.png');
+}
+
+.quote-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: rgb(255,255,255);
+  font-size: 3.2vw;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.quote-text span {
+  font-size: 2.8rem;
+}
+.quote-text span {
+  font-size: 6.5vw;
+}
+
+#quote-btn {
+  height: 100%;
+  margin-top: 30px;
+  padding: 15px 35px;
+  background-color: #fbcd1b;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+}
+
+/*  SOCIAL SHARE SECTION */
+
+#sam-social {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+#social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+#social-links {
+  margin: 0;
+  padding: 50px 20px;
+  height: auto;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ebeef2;
+}
+
+#footer-text {
+  padding: 30px 0;
+  font-size: 12px;
+}
+
+/******  MEDIA QUERIES ******/
+
+/* I admittedly struggle with media queries...
+best practices?...better alternatives?...universal breakpoints?
+Generally, I just look for places where the design breaks, and use those for my breakpoints. 
+Sometimes I just use Bootstrap or Foundation breakpoints, but always end up going outside of 
+those boundaries and set more custom ones as needed. I try to find a few common breakoints 
+that will work for multiple elements, but still usually end up feeling like I could be doing 
+things in a better or smarter way. I'm very interested in conquering responsive design, 
+and enjoy trying new approches. */
+
+@media (min-width: 1260px) {
+  #hero-section {
+    height: 70vh;
+  }
+  .hero-caption-text span {
+    font-size: 4vw;
+  }
+  .hero-caption-text {
+    font-size: 2vw;
+  }
+  #sam-ipad-img {
+    display: block;
+    width: 36%;
+    object-fit: contain;
+  }
+  .features-list {
+    margin-right: 50px;
+  }
+}
+
+@media (min-width: 960px) and (max-width: 1260px) {
+  #sam-ipad-img {
+    display: block;
+    width: 42%;
+    object-fit: contain;
+  }
+  #sam-features-lists {
+    font-size: 1.2vw;
+  }
+  .features-list {
+    line-height: 3.0;
+  }
+}
+
+@media (min-width: 960px) {
+  nav {
+    justify-content: space-between;
+    padding: 0 150px;
+  }
+  #sam-features-section {
+    margin-top: 100px;
+  }
+  #sam-features {
+    text-align: left;
+  }
+  .features-header {
+    width: 90%;
+    font-size: 1vw;
+  }
+  .features-header span {
+    font-size: 2.5vw;
+  }
+  #sam-features-lists {
+    width: auto;
+    justify-content: flex-start;
+  }
+  .quote-text span {
+    font-size: 3.6vw;
+  }
+  .quote-text {
+    font-size: 1.8vw;
+  }
+}
+
+@media (max-width: 960px) {
+  #sam-features {
+    font-size: 2.4vw;
+  }
+  #sam-features-section {
+    margin-top: 20px;
+  }
+  #quote-btn {
+    margin-top: 20px;
+    padding: 15px 25px;
+    font-size: 11px;
+  }
+}
+
+@media (min-width: 750px) and (max-width: 1260px)  {
+  .hero-caption-text span {
+    font-size: 5.5vw;
+  }
+  .hero-caption-text {
+    font-size: 2.7vw;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 960px) {
+  .features-header span {
+    font-size: 3.5vw;
+  }
+  .features-header {
+    font-size: 2vw;
+  }
+  #sam-features {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  #sam-features {
+    text-align: left;
+  }
+}
+
+@media (min-width: 525px) and (max-width: 960px) {
+  #hero-section {
+    height: 40vh;
+  }
+  #sam-features-lists {
+    font-size: 2.2vw;
+  }
+}
+
+@media (min-width: 525px) and (max-width: 750px) {
+  .hero-caption-text span {
+    font-size: 6vw;
+  }
+  .hero-caption-text {
+    font-size: 2.9vw;
+  }
+}
+
+@media (max-width: 525px) {
+  .hero-btn {
+    margin: 20px 10px 0;
+    font-size: 11px;
+    width: 160px;
+  }
+  #hero-btns {
+    width: 80%;
+  }
+  #customer-logos img {
+    width: 80%;
+    padding: 25px 0;
+  }
+  #sam-features {
+    width: 90%;
+    padding: 0;
+  }
+  #sam-features-lists {
+    justify-content: flex-start;
+    margin: 15px 0px 25px;
+    font-size: 4.3vw;
+  }
+  .features-list {
+    line-height: 2.0rem;
+    margin: 0;
+  }
+  .features-header {
+    text-align: left;
+  }
+  .features-header span {
+    font-weight: bold;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 960px) {
+  #sam-features {
+    width: 80%;
+  }
+  .quote-text span {
+    font-size: 4.5vw;
+  }
+  .quote-text {
+    font-size: 2.2vw;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 575px) {
+  #social-links {
+    padding: 50px 5px;
+    width: 12%;
+  }
+}
+
+@media (max-width: 375px) {
+  nav {
+    height: 70px;
+  }
+  .nav-logo {
+    width: 100%;
+    justify-content: center;
+    align-self: flex-end;
+  }
+  .nav-phone {
+    font-size: 14px;
+    align-self: flex-start;
+  }
+  #social-links {
+    padding: 30px 5px;
+    width: 12%;
+  }
+}
+
+/* LANDSCAPE ORIENTATION */
+
+/* I don't have much experience with landscape orientation queries.  
+This seemed to work for most devices in this particular application */
+
+@media screen and (orientation: landscape) and (max-width: 960px) and (max-height: 750px) {
+  #hero-section {
+    height: 100vh;
+  }
+  #sam-features-section {
+    margin: 20px 0;
+  }
+  .features-header {
+    font-size: 2vw;
+    text-align: center;
+  }
+  .features-header span {
+    font-size: 3.5vw;
+  }
+}
